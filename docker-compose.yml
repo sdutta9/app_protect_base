@@ -1,16 +1,12 @@
 version: '3.3'
 services:
   # WebServers hosting OWASP Juice shop application
-  nginx1:
-      hostname: nginx1
+  juice1:
+      hostname: juiceserver1
       image: bkimminich/juice-shop
 
-  nginx2:
-      hostname: nginx2
-      image: bkimminich/juice-shop
-
-  nginx3:
-      hostname: nginx3
+  juice2:
+      hostname: juiceserver2
       image: bkimminich/juice-shop
 
 
@@ -19,7 +15,10 @@ services:
       hostname: nginx-plus
       build: nginx-plus
       volumes:
-          - ./nginx-plus/etc/nginx:/etc/nginx
+          - ./nginx-plus/etc/nginx/conf.d:/etc/nginx/conf.d
+          - ./nginx-plus/etc/nginx/includes:/etc/nginx/includes
+          - ./nginx-plus/etc/nginx/nginx.conf:/etc/nginx/nginx.conf
+          - ./nginx-plus/etc/ssl:/etc/ssl
       ports:
           - 8080:8080
           - 80:80
