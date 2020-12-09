@@ -9,7 +9,7 @@
                 {
                     "name": "VIOL_HTTP_PROTOCOL",
                     "alarm": true,
-                    "block": false
+                    "block": true
                 }
             ]
         }
