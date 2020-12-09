@@ -1,0 +1,24 @@
+[
+    {
+        "name": "*",
+        "type": "wildcard",
+        "allowed": true,
+        "checkPostDataLength": false,
+        "postDataLength": 4096,
+        "checkRequestLength": false,
+        "requestLength": 8192,
+        "checkUrlLength": true,
+        "urlLength": 2048,
+        "checkQueryStringLength": true,
+        "queryStringLength": 2048,
+        "responseCheck": false
+    },
+    {
+        "name": "pat",
+        "allowed": false
+    },
+    {
+        "name": "mat",
+        "allowed": false
+    }
+]
