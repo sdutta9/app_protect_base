@@ -1,0 +1,17 @@
+{
+    "policy" : {
+        "name": "policy-viol_http_protocol",
+        "template": { "name": "POLICY_TEMPLATE_NGINX_BASE" },
+        "applicationLanguage": "utf-8",
+        "enforcementMode": "blocking",
+        "blocking-settings": {
+            "violations": [
+                {
+                    "name": "VIOL_HTTP_PROTOCOL",
+                    "alarm": true,
+                    "block": false
+                }
+            ]
+        }
+    }
+}
