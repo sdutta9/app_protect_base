@@ -39,7 +39,7 @@ RUN apt-get update \
 && apt-get install -y app-protect-threat-campaigns
 
 # Remove nginx repository key/cert from docker
-# RUN rm -rf /etc/ssl/nginx
+RUN rm -rf /etc/ssl/nginx
 
 # Forward request logs to Docker log collector:
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
