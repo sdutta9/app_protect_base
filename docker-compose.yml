@@ -8,6 +8,19 @@ services:
     juice2:
         hostname: juiceserver2
         image: bkimminich/juice-shop
+    
+    elk:
+        image: sebp/elk:742
+        hostname: elk
+        mem_limit: 4g
+        restart: always
+        volumes:
+          - ./logstash/conf.d:/etc/logstash/conf.d:ro
+          - elk:/var/lib/elasticsearch
+        ports:
+          - 9200:9200
+          - 5601:5601
+          - 5144:5144
 
     # NGINX Plus Load Balancer
     nginx-plus:
@@ -22,3 +35,5 @@ services:
             - 80:80
             - 443:443
         restart: always
+volumes:
+    elk:
