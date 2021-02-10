@@ -39,4 +39,4 @@ This repo has **four** "distinct" branches which can be used for different demos
 ### ***advance_elk* Branch**
 - This branch is based on `advance` branch. This branch can be used to demostrate how App Protect logs can be streamed to an elasticsearch server and then consolidate logs can be viewed within Kibana dashboard.
 - The `docker-compose` file within this branch adds `elk` service which is used for Kibana dashboards.
-- The Kibana dashboard can be accessed using [http:\\localhost:5601](http://localhost:5601/)
+- The Kibana dashboard can be accessed using [http://localhost:5601](http://localhost:5601/)
