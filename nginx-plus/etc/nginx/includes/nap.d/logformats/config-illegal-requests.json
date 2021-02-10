@@ -5,9 +5,8 @@
  
     "content": {
         "format": "user-defined",
-        "format_string": "Request ID %support_id%: %method% %uri% received on %date_time% from IP %ip_client% had the following violations: %violations%. Policy is %policy_name%",
+        "format_string": "Request ID %support_id%: %method% %uri% received on %date_time% from IP %ip_client% had the following AttackType=%attack_type% and violations: %violations%. Policy is %policy_name%",
         "max_request_size": "any",
         "max_message_size": "5k"
     }
 }
-
