@@ -5,10 +5,6 @@ services:
         hostname: juiceserver1
         image: bkimminich/juice-shop
 
-    juice2:
-        hostname: juiceserver2
-        image: bkimminich/juice-shop
-
     # NGINX Plus Load Balancer
     nginx-plus:
         hostname: nginx-plus
