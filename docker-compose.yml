@@ -4,10 +4,6 @@ services:
     juice1:
         hostname: juiceserver1
         image: bkimminich/juice-shop
-
-    juice2:
-        hostname: juiceserver2
-        image: bkimminich/juice-shop
     
     elk:
         image: sebp/elk:742
