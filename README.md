@@ -4,8 +4,6 @@
 
 This repository contains resources that can be used to demo Nginx App Protect within a Docker environment.
 
-**NOTE:** All App Protect related configurations are applied to the `http` context present inside the `nginx.conf` file for all the branches. 
-
 ## Guide
 
 This repo has **four** "distinct" branches which can be used for different demos as described below.
@@ -32,11 +30,13 @@ This repo has **four** "distinct" branches which can be used for different demos
   ```
 
 ### ***advance* Branch**
-- This branch is based on `main` branch. This branch can be used to demonstrate custom `log-format` and custom `policy` in context to App Protect.
+- This branch is based of `main` branch. This branch can be used to demonstrate custom `log-format` and custom `policy` in context to App Protect.
 - Toggle between various commented `policy` lines within `nginx.conf` to cover various scenarios.
 - Within this branch, App Protect related policies are also applied to `\basic` location block present inside the `conf.d\example.com.conf` file along with `http` context present inside the `nginx.conf` file.
 
 ### ***advance_elk* Branch**
-- This branch is based on `advance` branch. This branch can be used to demostrate how App Protect logs can be streamed to an elasticsearch server and then consolidate logs can be viewed within Kibana dashboard.
+- This branch is based of `advance` branch. This branch can be used to demostrate how App Protect logs can be streamed to an elasticsearch server and then consolidate logs can be viewed within Kibana dashboard.
 - The `docker-compose` file within this branch adds `elk` service which is used for Kibana dashboards.
 - The Kibana dashboard can be accessed using [http://localhost:5601](http://localhost:5601/)
+- For further details on how to setup ELK for NAP refer to https://github.com/f5devcentral/f5-waf-elk-dashboards repository.
+
