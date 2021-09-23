@@ -6,17 +6,30 @@ services:
         image: bkimminich/juice-shop
     
     elk:
-        image: sebp/elk:742
+        image: sebp/elk:792
+        container_name: elk
         hostname: elk
-        mem_limit: 4g
+        # mem_limit: 4g
         restart: always
         volumes:
-          - ./logstash/conf.d:/etc/logstash/conf.d:ro
-          - elk:/var/lib/elasticsearch
+          - ./elk/logstash/conf.d:/etc/logstash/conf.d:ro
+          - ./elk/elasticsearch:/var/lib/elasticsearch
+          - ./elk/kibana/kibana.yml:/opt/kibana/config/kibana.yml
+        expose:
+            - 5601
+            - 9200
+            - 5044
+            - 5145 # NGINX syslog
+            - 5144 # WAF logs
         ports:
           - 9200:9200
           - 5601:5601
           - 5144:5144
+        healthcheck:
+            test: "wget -qO- http://localhost:5601 > /dev/null"
+            interval: 30s
+            timeout: 10s
+            retries: 10
 
     dvwa1:
         hostname: DVWAServer1
@@ -35,5 +48,5 @@ services:
             - 80:80
             - 443:443
         restart: always
-volumes:
-    elk:
+# volumes:
+#     elk:
