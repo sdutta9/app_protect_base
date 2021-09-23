@@ -5,6 +5,10 @@ services:
         hostname: juiceserver1
         image: bkimminich/juice-shop
 
+    dvwa1:
+        hostname: DVWAServer1
+        image: vulnerables/web-dvwa
+        
     # NGINX Plus Load Balancer
     nginx-plus:
         hostname: nginx-plus
