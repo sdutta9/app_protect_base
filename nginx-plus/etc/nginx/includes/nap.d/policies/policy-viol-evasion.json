@@ -11,6 +11,41 @@
                     "alarm": true,
                     "block": true
                 }
+            ],
+            "evasions": [
+                {
+                    "description": "Bad unescape",
+                    "enabled": true
+                },
+                {
+                    "description": "Directory traversals",
+                    "enabled": true
+                },
+                {
+                    "description": "Bare byte decoding",
+                    "enabled": true
+                },
+                {
+                    "description": "Apache whitespace",
+                    "enabled": true
+                },
+                {
+                    "description": "Multiple decoding",
+                    "enabled": true,
+                    "maxDecodingPasses": 2
+                },
+                {
+                    "description": "IIS Unicode codepoints",
+                    "enabled": true
+                },
+                {
+                    "description": "IIS backslashes",
+                    "enabled": true
+                },
+                {
+                    "description": "%u decoding",
+                    "enabled": true
+                }
             ]
         }
     }
