@@ -3,3 +3,6 @@ nginx-repo.*
 
 # Ignore MacOS system files
 .DS_Store
+
+# Ignore elk related auto generated files
+$GIT_DIR/elk/elasticsearch
