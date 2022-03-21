@@ -14,12 +14,14 @@ RUN apt-get update && apt-get install -y apt-transport-https lsb-release ca-cert
 && apt-get install -y nano
 
 #Below steps are needed to install App Protect:
-# Download and add the NGINX signing key:
+# Download and add the NGINX signing key and App Protect security updates signing key:
 RUN wget https://cs.nginx.com/static/keys/nginx_signing.key && apt-key add nginx_signing.key
+RUN wget https://cs.nginx.com/static/keys/app-protect-security-updates.key && apt-key add app-protect-security-updates.key
 # Add NGINX Plus repository:
-RUN printf "deb https://plus-pkgs.nginx.com/ubuntu `lsb_release -cs` nginx-plus\n" | tee /etc/apt/sources.list.d/nginx-plus.list
+RUN printf "deb https://pkgs.nginx.com/plus/ubuntu `lsb_release -cs` nginx-plus\n" | tee /etc/apt/sources.list.d/nginx-plus.list
+RUN printf "deb https://pkgs.nginx.com/app-protect/ubuntu `lsb_release -cs` nginx-plus\n" | tee /etc/apt/sources.list.d/nginx-app-protect.list
 # Download the apt configuration to `/etc/apt/apt.conf.d`:
-RUN wget -P /etc/apt/apt.conf.d https://cs.nginx.com/static/files/90nginx
+RUN wget -P /etc/apt/apt.conf.d https://cs.nginx.com/static/files/90pkgs-nginx
 # Update the repository and install the most recent version of the NGINX Plus App Protect package (which includes NGINX Plus):
 RUN apt-get update && apt-get install -y app-protect
 
