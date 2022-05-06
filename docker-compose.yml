@@ -13,8 +13,8 @@ services:
         restart: always
         volumes:
           - ./elk/logstash/conf.d:/etc/logstash/conf.d:ro
-          - ./elk/elasticsearch:/var/lib/elasticsearch
-        #   - ./elk/kibana/kibana.yml:/opt/kibana/config/kibana.yml
+        #   - ./elk/elasticsearch:/var/lib/elasticsearch
+          - ./elk/kibana/kibana.yml:/opt/kibana/config/kibana.yml
         expose:
             - 5601
             - 9200
