@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains resources that can be used to demo Nginx App Protect within a Docker environment.
+This repository contains resources that can be used to demo Nginx App Protect within a Docker environment. This demo requires paid version of NGINX. Before running demo from any of the branches please make sure you have put the NGINX Plus key and cert within `nginx-plus/etc/ssl/nginx/` directory. You can request for an NGINX Plus trial key by visiting [www.nginx.com](https://www.nginx.com/free-trial-request/).
 
 ## Guide
 
@@ -36,6 +36,7 @@ This repo has **four** "distinct" branches which can be used for different demos
 
 ### ***advance_elk* Branch**
 - This branch is based of `advance` branch. This branch can be used to demostrate how App Protect logs can be streamed to an elasticsearch server and then consolidate logs can be viewed within Kibana dashboard.
+- As a prerequisite, please allocate sufficient virtual memory to docker desktop as elk consumes a significant amount of memory. (**Recommended:** Atleast 4GB memory)
 - The `docker-compose` file within this branch adds `elk` service which is used for Kibana dashboards.
 - The Kibana dashboard can be accessed using [http://localhost:5601](http://localhost:5601/)
 - For further details on how to setup ELK for NAP refer to https://github.com/f5devcentral/f5-waf-elk-dashboards repository.
