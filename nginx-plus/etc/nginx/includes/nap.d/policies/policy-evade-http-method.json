@@ -1,6 +1,6 @@
 {
     "policy": {
-      "name": "test_policy",
+      "name": "policy-evade-http-method",
       "template": {
         "name": "POLICY_TEMPLATE_NGINX_BASE"
       },
