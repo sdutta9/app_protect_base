@@ -12,11 +12,7 @@ This repo has **four** "distinct" branches which can be used for different demos
 
 ### ***main* Branch** 
 - This branch can be used to demonstrate basic configuration to enable App Protect. 
-- The `Dockerfile` within `nginx-plus` directory has steps to install App Protect.
-  
-### ***main_with_ST* Branch**
-- This branch is based of `main` branch and can be used to demostrate how `Attack Signatures` and `Threat campaigns` can be updated.
-- The `Dockerfile` within `nginx-plus` directory for this branch has steps to install `Attack Signatures` and `Threat campaigns` packages.
+- The `Dockerfile` within `nginx-plus` directory has steps to install App Protect and also installs `Attack Signatures` and `Threat campaigns` packages.
 - You can test the installation of this packages by getting inside the `nginx-plus` container and then running the below commands:
   ```bash
   docker exec -it [containerID] bash

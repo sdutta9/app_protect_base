@@ -20,13 +20,5 @@
                 "allowed": true
             }
         ]
-    },
-    "modifications": [
-        {
-            "entityChanges": {"type": "wildcard"},
-            "entity": {"name": "*"},
-            "entityType": "filetype",
-            "action": "delete"
-        }
-    ]
+    }
 }

@@ -1,0 +1,29 @@
+{
+    "policy": {
+      "name": "policy-evade-http-method",
+      "template": {
+        "name": "POLICY_TEMPLATE_NGINX_BASE"
+      },
+      "applicationLanguage": "utf-8",
+      "enforcementMode": "blocking",
+      "urls": [
+        {
+          "name": "/basic2",
+          "wildcardOrder": 0,
+          "protocol": "http",
+          "type": "explicit",
+          "attackSignaturesCheck": false,
+          "method": "GET",
+          "isAllowed": true
+        },
+        {
+          "name": "/basic2",
+          "wildcardOrder": 1,
+          "method": "*",
+          "attackSignaturesCheck": true,
+          "clickjackingProtection": true,
+          "isAllowed": true
+        }
+      ]
+    }
+  }
