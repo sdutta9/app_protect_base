@@ -38,7 +38,9 @@ services:
     # NGINX Plus Load Balancer
     nginx-plus:
         hostname: nginx-plus
-        build: nginx-plus
+        build: 
+           context: nginx-plus
+           dockerfile: Dockerfile_ubuntu
         volumes:
             - ./nginx-plus/etc/nginx/conf.d:/etc/nginx/conf.d
             - ./nginx-plus/etc/nginx/includes:/etc/nginx/includes
