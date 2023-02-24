@@ -1,6 +1,6 @@
 
 # For CentOS 7:
-FROM centos:7.4.1708
+FROM centos:centos7
 
 LABEL maintainer="sh.dutta@f5.com"
 
