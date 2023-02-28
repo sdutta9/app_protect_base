@@ -1,5 +1,5 @@
 
-# For CentOS 7:
+# For CentOS 7.9:
 FROM centos:centos7
 
 LABEL maintainer="sh.dutta@f5.com"
@@ -15,11 +15,11 @@ RUN yum -y install wget ca-certificates epel-release
 # Add NGINX Plus repo to Yum:
 RUN wget -P /etc/yum.repos.d https://cs.nginx.com/static/files/nginx-plus-7.4.repo
 
-# Add NGINX App-protect repo to Yum:
-RUN wget -P /etc/yum.repos.d https://cs.nginx.com/static/files/app-protect-7.repo
+# Add NGINX App-protect DOS repo to Yum:
+RUN wget -P /etc/yum.repos.d https://cs.nginx.com/static/files/app-protect-dos-7.repo
 
 # Install NGINX App Protect WAF:
-RUN yum -y install app-protect \
+RUN yum -y install app-protect-dos \
     && yum clean all \
     && rm -rf /var/cache/yum
 
