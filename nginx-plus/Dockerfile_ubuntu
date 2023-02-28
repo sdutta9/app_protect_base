@@ -1,5 +1,5 @@
-# For Ubuntu 18.04:
-FROM ubuntu:bionic
+# For Ubuntu 20.04:
+FROM ubuntu:focal
 
 LABEL maintainer="sh.dutta@f5.com"
 
