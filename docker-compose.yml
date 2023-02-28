@@ -31,9 +31,9 @@ services:
             timeout: 10s
             retries: 10
 
-    dvwa1:
-        hostname: DVWAServer1
-        image: vulnerables/web-dvwa
+    # dvwa1:
+    #     hostname: DVWAServer1
+    #     image: vulnerables/web-dvwa
         
     # NGINX Plus Load Balancer
     nginx-plus:

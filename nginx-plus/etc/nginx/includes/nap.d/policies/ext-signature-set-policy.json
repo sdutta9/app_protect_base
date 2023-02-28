@@ -1,0 +1,14 @@
+{
+    "policy": {
+        "name": "external_attack_sigs",
+        "template": {
+            "name": "POLICY_TEMPLATE_NGINX_BASE"
+        },
+        "applicationLanguage": "utf-8",
+        "enforcementMode": "blocking",
+        
+        "signature-setReference": {
+            "link": "file:///etc/nginx/includes/nap.d/my-signature-sets.txt"
+        }
+    }
+}

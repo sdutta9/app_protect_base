@@ -1,0 +1,12 @@
+[
+    {
+        "name": "High Accuracy Signatures",
+        "block": true,
+        "alarm": true
+    },
+    {
+        "name": "SQL Injection Signatures",
+        "block": false,
+        "alarm": true
+    }
+]

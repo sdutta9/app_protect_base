@@ -1,0 +1,22 @@
+{
+    "policy": {
+        "name": "attack_sigs",
+        "template": {
+            "name": "POLICY_TEMPLATE_NGINX_BASE"
+        },
+        "applicationLanguage": "utf-8",
+        "enforcementMode": "blocking",
+        "signature-sets": [
+            {
+                "name": "High Accuracy Signatures",
+                "block": true,
+                "alarm": true
+            },
+            {
+                "name": "SQL Injection Signatures",
+                "block": false,
+                "alarm": true
+            }
+        ]
+    }
+}
