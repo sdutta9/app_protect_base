@@ -1,5 +1,5 @@
 
-# For CentOS 7:
+# For CentOS 7.9:
 FROM centos:centos7
 
 LABEL maintainer="sh.dutta@f5.com"
