@@ -35,6 +35,9 @@ COPY etc/nginx /etc/nginx
 
 # COPY entrypoint.sh file:
 COPY entrypoint.sh /root/
+# uncomment this for L4 accelerated mitigation feature
+# COPY entrypoint_L4.sh /root/entrypoint.sh
+
 RUN chmod 744 /root/entrypoint.sh
 
 CMD /root/entrypoint.sh && tail -f /dev/null
