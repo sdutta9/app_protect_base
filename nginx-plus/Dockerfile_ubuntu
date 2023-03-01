@@ -38,5 +38,6 @@ COPY etc/nginx /etc/nginx
 
 # COPY entrypoint.sh file:
 COPY entrypoint.sh /root/
+RUN chmod 744 /root/entrypoint.sh
 
-CMD ["sh", "/root/entrypoint.sh"]
+CMD /root/entrypoint.sh && tail -f /dev/null
