@@ -7,7 +7,7 @@
         "applicationLanguage": "utf-8",
         "enforcementMode": "blocking",
         
-        "signature-setReference": {
+        "signatureSetReference": {
             "link": "file:///etc/nginx/includes/nap.d/my-signature-sets.txt"
         }
     }
