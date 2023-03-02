@@ -10,8 +10,8 @@ services:
     #     image: vulnerables/web-dvwa
         
     # NGINX Plus Load Balancer
-    nginx-plus:
-        hostname: nginx-plus
+    nginx-plus-dos:
+        hostname: nginx-plus-dos
         build: 
            context: nginx-plus
            dockerfile: Dockerfile_ubuntu
